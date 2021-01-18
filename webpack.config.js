@@ -2,6 +2,7 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const loader = require('sass-loader')
+const webpack = require('webpack')
 
 module.exports = {
     entry: {
@@ -11,12 +12,22 @@ module.exports = {
         path: path.resolve(__dirname, './dist'),
         filename: '[name].js',
     },
+    mode: 'development',
+    devServer: {
+        historyApiFallback: true,
+        contentBase: path.resolve(__dirname, './dist'),
+        open: true,
+        compress: true,
+        hot: true,
+        port: 3000,
+    },
     plugins: [
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, './src/index.html'),
             filename: 'index.html',
         }),
         new CleanWebpackPlugin(),
+        new webpack.HotModuleReplacementPlugin(),
     ],
     module: {
         rules: [
@@ -39,6 +50,5 @@ module.exports = {
             },
         ],
     },
-    mode: 'development',
-    dev
+
 }
