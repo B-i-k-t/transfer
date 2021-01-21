@@ -16,7 +16,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, './src/index.html'),
+            template: path.resolve(__dirname, './src/index.pug'),
             filename: 'index.html',
         }),
         new CleanWebpackPlugin(),
@@ -53,9 +53,16 @@ module.exports = {
                 use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
             },
             {
-                test: /\.html$/i,
-                loader: 'html-loader',
-            }
+                test: /\.pug$/,
+                use: [
+                    {
+                      loader: "html-loader"
+                    },
+                    {
+                      loader: "pug-html-loader",
+                    },
+                  ],
+            },
         ],
     },
     
