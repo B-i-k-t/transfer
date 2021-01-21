@@ -12,6 +12,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, './dist'),
         filename: '[name].js',
+        assetModuleFilename: 'asset/[name][ext]',
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -26,21 +27,35 @@ module.exports = {
         rules: [
             {
                 test: /\.js$/,
-                exclude: /node_modules/ ,
+                exclude: /node_modules/,
                 use: ['babel-loader',]
             },
             {
-                test: /\.(?:ico|gif|png|jpg|jpeg|svg)$/i,
+                test: /\.(?:ico|gif|png|jpe?g)$/i,
                 type: 'asset/resource',
+                generator: {
+                    filename: 'img/[name][ext]'
+                    },
             },
             {
-                test: /\.(woff(2)?|eot|ttf|otf|)$/,
-                type: 'asset/inlne',
+                test: /\.svg/,
+                use: {
+                  loader: "svg-url-loader",
+                  options: {},
+                },
+            },
+            {
+                test: /\.(woff(2)?|eot|ttf|otf)$/,
+                type: 'asset/inline',
             },
             {
                 test: /\.(s[ac]ss|css)$/,
                 use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
             },
+            {
+                test: /\.html$/i,
+                loader: 'html-loader',
+            }
         ],
     },
     
