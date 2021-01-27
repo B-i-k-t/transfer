@@ -3,6 +3,7 @@ const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 
 module.exports = {
@@ -22,6 +23,13 @@ module.exports = {
         new CleanWebpackPlugin(),
         new webpack.HotModuleReplacementPlugin(),
         new MiniCssExtractPlugin(),
+        new CopyWebpackPlugin({
+            patterns: [
+             {
+                from: './src/img',
+                to: './img'
+            },
+        ]}),
     ],
     module: {
         rules: [
@@ -30,14 +38,7 @@ module.exports = {
                 exclude: /node_modules/,
                 use: ['babel-loader',]
             },
-            {
-                test: /\.(?:ico|gif|png|jpe?g)$/i,
-                type: 'asset/resource',
-                generator: {
-                    filename: 'img/[name][ext]'
-                    },
-            },
-            {
+             {
                 test: /\.svg/,
                 use: {
                   loader: "svg-url-loader",
@@ -50,7 +51,8 @@ module.exports = {
             },
             {
                 test: /\.(s[ac]ss|css)$/,
-                use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+                use: [ MiniCssExtractPlugin.loader,                   
+                      'css-loader?url=false', 'sass-loader'],
             },
             {
                 test: /\.html$/i,
