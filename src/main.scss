@@ -1,4 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap');
+
+$white: #FFFFFF;
+$black: #000000;
+$gray: #9F9F9F;
+$yellow: #FEDA1F;
+$blue: #2747F0;
+$gray_bcg: #E5E5E5;
+
 html {
     font-size: 10px;
 }
@@ -7,5 +15,56 @@ body {
     overflow: hidden;
 }
 .header {
-    background: url('./img/header_bcg.png');
+    background: url('./img/header_bcg.png') 50% 50% no-repeat;
+}
+.container {
+    max-width: 1120px;
+    margin: auto;
+    padding: 3px;
+}
+.nav {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.nav__left {
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: $white;
+
+}
+.nav__center {
+    display: flex;
+    justify-content: space-between;
+}
+.nav__link {
+    text-decoration: none;
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    color: $white;
+    padding: .3rem;
+
+}
+.nav__link:hover, .nav__link:focus {
+    color: $yellow;
+    transition: color .2s linear;
+}
+.nav__phone {
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color:$white;
+}
+.nav__schedule {
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    color: $white;
 }
