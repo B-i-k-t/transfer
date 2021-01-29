@@ -2,10 +2,18 @@
 
 $white: #FFFFFF;
 $black: #000000;
+$black__light: #2C2C2C;
 $gray: #9F9F9F;
 $yellow: #FEDA1F;
 $blue: #2747F0;
 $gray_bcg: #E5E5E5;
+$gray_border: #C5C5C5;
+
+%flex__space-between {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
 
 html {
     font-size: 10px;
@@ -14,14 +22,43 @@ body {
     font-family: 'Montserrat', sans-serif;
     overflow: hidden;
 }
-.header {
-    background: url('./img/header_bcg.png') 50% 50% no-repeat;
-}
 .container {
     max-width: 1120px;
     margin: auto;
     padding: 3px;
 }
+
+/*=== HEADER ===*/
+.header {
+    background: url('./img/header_bcg.png') 50% 50% no-repeat;
+}
+.header__title {
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 8rem;
+    line-height: 9.8rem;
+    color: $white;
+    text-align: center;
+}
+.header__subtitles {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.header__subtitle {
+    display: flex;
+    justify-content: center;
+}
+.header__sub{
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    color: $white;
+    max-width: 361px;
+}
+
+/*=== nav ===*/
 .nav {
     display: flex;
     justify-content: space-between;
@@ -34,7 +71,7 @@ body {
     font-size: 1.6rem;
     line-height: 2rem;
     color: $white;
-
+    max-width: 175px;
 }
 .nav__center {
     display: flex;
@@ -48,7 +85,6 @@ body {
     line-height: 1.7rem;
     color: $white;
     padding: .3rem;
-
 }
 .nav__link:hover, .nav__link:focus {
     color: $yellow;
@@ -67,4 +103,70 @@ body {
     font-size: 1.2rem;
     line-height: 1.5rem;
     color: $white;
+}
+
+/*=== order form ===*/
+.order {
+    max-width: 987px;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 40px 65px 65px;
+    margin: auto;
+}
+.order__caption {
+    display: flex;
+    justify-content: start;
+}
+.order__title{
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    color: $black;
+}
+.gold {
+    color: $yellow;
+}
+.order__subtitle {
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    color: $gray;
+}
+.order__form{
+    @extend %flex__space-between;
+}
+.order__left{
+    width: 50%;
+}
+.order__name, .order__phone, .order__time, 
+.order__date, .order__hours, .order__from, .order__to{
+    border: 2px solid $gray_border;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    color: $black__light;
+}
+.order__right {
+    width: 50%;
+}
+.order__place {
+    @extend %flex__space-between;
+}
+
+/*=== button ===*/
+.btn {
+    background: #2747F0;
+    box-shadow: 0px 0px 10px rgba(39, 68, 222, 0.3);
+    border-radius: 30px;
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    color: $white;
+
 }

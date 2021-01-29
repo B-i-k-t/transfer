@@ -26,8 +26,42 @@
                         круглосуточно и бесплатно
                     </div>
                 </div>
-            </nav>
-        </div>
+            </nav> <!-- nav end -->
+            <h1 class="header__title">Трансфер по Крыму</h1>
+            <div class="header__subtitles">
+                <div class="header__subtitle">
+                    <h3 class="header__sub">Трансферы между городами и поселками Крыма</h3>
+                </div>
+                <div class="header__subtitle">
+                    <h3 class="header__sub">Трансфер из аэропорта в любую точку Крыма</h3>
+                </div>            
+            </div> <!-- header__subtitles end -->            
+            <form class="order">
+                <div class="order__caption">
+                    <h3 class="order__title">Заказать <span class="gold">такси</span></h3>
+                    <p class="order__subtitle">Заполните форму, чтобы заказать такси</p>
+                </div>
+                <div class="order__form">
+                    <div class="order__left">
+                        <input type="text" class="order__name" placeholder="Имя">
+                        <input type="tel" class="order__phone" placeholder="Телефон">
+                        <textarea name="order__comments" placeholder="Комментарий" class="order__comments" cols="30" rows="10"></textarea>
+                    </div>
+                    <div class="order__right">
+                        <div class="order__time">
+                            <input type="text" class="order__date" placeholder="Дата заказа такси">
+                            <input type="text" class="order__hours" placeholder="Время">
+                        </div>
+                        <div class="order__place">
+                            <input type="text" class="order__from" placeholder="Откуда">
+                            <input type="text" class="order__to" placeholder="Куда">
+                        </div>
+                        <select name="order__car" class="order__car"></select>
+                        <button class="btn">Заказать такси</button>
+                    </div>       
+                </div><!-- order__form end -->                 
+            </form> <!-- order end -->
+        </div> <!-- container end -->
     </header>
 </body>
 </html>
