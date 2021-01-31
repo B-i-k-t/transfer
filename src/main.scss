@@ -254,3 +254,60 @@ body {
     line-height: 2rem;
     color: $white;
 }
+
+/*=== speech ===*/
+.speech__block {
+    display: flex;
+    justify-content: space-between;
+    background: $yellow;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    height: 444px;
+}
+.speech__content {
+    padding: 0 6.4rem;
+    background: $white;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    width: 795px;
+    box-sizing: border-box;
+    
+}
+.speech__apostrophe {
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 12rem;
+    line-height: 14.6rem;
+    color: $black__light;
+    margin: 0;
+    margin-top: -43px;
+    margin-bottom: -43px;
+}
+.speech__title {
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 2.4;
+    color: $black;
+    margin: 0;
+    margin-bottom: 3.3rem;
+}
+.speech__text {
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 1.6;
+    line-height: 2rem;
+    color: $gray;
+    padding-right: 5px;
+    margin: 0;
+    margin-bottom: 0.8rem;
+}
+.speech__director {
+    margin-top: -16px;
+    width: 364px;
+    height: 462px;
+    background-color: transparent;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    margin-right: 22px;
+    margin-left: -60px;
+}
