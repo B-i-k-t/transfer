@@ -218,23 +218,30 @@ body {
 .gold {
     color: $yellow;
 }
+.blue {
+    color: $blue;
+}
+
+/*=== block__title ===*/
+.block__title {
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 4.9rem;
+    color: $black__light;
+    margin-left: 5.4rem;
+}
+
 
 /*=== causes ===*/
 .causes {
     padding-top: 7rem;
     padding-bottom: 4.3rem;
 }
-.causes__title {
-    font-family: Montserrat;
-    font-weight: 700;
-    font-size: 4rem;
-    line-height: 4.9rem;
-    color: $black__light;
-    margin-bottom: 4rem;
-}
 .causes__block {
     @extend %flex__space-between;
     margin: -1.5rem;
+    margin-top: 4rem;
 }
 .causes__item {
     max-width: 350px;
@@ -325,16 +332,9 @@ body {
 }
 
 /*=== class ===*/
-.class__title {
-    font-family: Montserrat;
-    font-weight: 700;
-    font-size: 4rem;
-    line-height: 4.9rem;
-    color: $black__light;
-    margin-bottom: 5rem;
-}
 .class__car {
     @extend %flex__space-between;
+    margin-top: 5rem;
 }
 .class_item {
     width: 25%;
@@ -382,14 +382,6 @@ body {
 /*=== popular ===*/
 .popular {
     margin-bottom: 7rem;
-}
-.popular__title {
-    font-family: Montserrat;
-    font-weight: 700;
-    font-size: 4rem;
-    line-height: 4.9rem;
-    color: $black__light;
-    margin-left: 6rem;
 }
 .popular__blocks {
     display: grid;
@@ -444,7 +436,48 @@ body {
     line-height: 2rem;
     color: $black__light;
     text-decoration: none;
+    &:hover, &:focus {
+        opacity: .8;
+        transition: opacity .2s linear;
+    }
 }
-.blue {
+
+/*==numeral===*/
+.numeral {
+    margin-bottom: 7.9rem;
+}
+.numeral__block {
+    @extend %flex__space-between;
+}
+.numeral__item {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.numeral__digits {
+    display: flex;
+    justify-content: center;
+}
+.numeral__icon {
     color: $blue;
+    width: 6rem;
+    height: 6rem;
+    margin-right: .4rem;
+}
+.numeral__digit {
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 3.7rem;
+    color: $blue;
+    margin: 0;
+}
+.numeral__text {
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    text-align: center;
+    color: $black__light;
+    margin: .8rem 0 0;
 }
