@@ -481,3 +481,95 @@ body {
     color: $black__light;
     margin: .8rem 0 0;
 }
+
+/*=== review ===*/
+.review {
+    margin-bottom: 8.6rem;
+}
+.review__header {
+    display: flex;
+    flex-wrap: wrap;
+}
+.review__subtitle {
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: $gray;
+}
+.review__block {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 3rem;
+}
+.review__item {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.review__rectangle {
+    background: linear-gradient(180deg, #2747F0 0%, #203DD6 100%);
+    border-radius: 10px;
+    height: 26rem;
+    padding: 0 3.7rem;
+}
+.review__apostrof {
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 10rem;
+    line-height: 12.2rem;
+    color: $black__light;
+    margin-top: -3rem;
+    margin-bottom: 0;
+}
+.review__text {
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: $white;
+    margin-top: -3rem;
+    margin-bottom: 0;
+}
+.review__wrapper {
+    text-align: right;
+}
+.review__arrow {
+    width: 6.5rem;
+    height: 6.5rem;
+    margin-left: 5.3rem;
+    margin-top: -2.5rem;
+    fill: #203DD6;
+}
+.review__arrow-right {
+    margin-right: 5.3rem;
+}
+.review__klient {
+    display: flex;
+}
+.review__klient-right {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.review__foto {
+    width: 7.5rem;
+    height: 7.5rem;
+    margin-right: 2.1rem;
+    margin-left: 4.7rem;
+}
+.review__foto-right {
+    order: 1;
+    margin-right: 4.7rem;
+    margin-left: 2.1rem;
+}
+.review__name {
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: $black__light;
+}
+.review__name-right {
+    order: 0;
+}
