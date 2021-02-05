@@ -197,7 +197,7 @@ body {
 
 /*=== button ===*/
 .btn {
-    background: #2747F0;
+    background-color: #2747F0;
     box-shadow: 0px 0px 10px rgba(39, 68, 222, 0.3);
     border-radius: 30px;
     font-family: Montserrat;
@@ -208,6 +208,10 @@ body {
     width: 25.6rem;
     height: 5rem;
     border: 0;
+    &:focus, &:hover {
+        background-color: $yellow;
+        transition: background-color .2s linear;
+    }
 }
 .small_btn {
     position: absolute;
@@ -572,4 +576,120 @@ body {
 }
 .review__name-right {
     order: 0;
+}
+
+/*=== ask ===*/
+.ask {
+    margin-bottom: 7rem;
+}
+.ask__header {
+    background: $gray_bcg;
+    border-radius: 5px;
+    display: flex;
+    margin-bottom: 2rem;
+}
+.ask__header-active {
+    background: $yellow;
+}
+.ask__minus, .ask__plus{
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: $black__light;
+    display: none;
+    margin-left: 6.3rem;
+    margin-right: 1.5rem;
+}
+.ask__minus-active, .ask__plus-active {
+    display: block;
+}
+.ask__title {
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: #2C2C2C;
+}
+.ask__text {
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: $gray;
+    display: none;
+    margin-left: 6rem;
+    max-width: 70rem;
+}
+.ask__text-active {
+    display: block;
+}
+
+/*=== seo ===*/
+.seo {
+    margin-bottom: 6.8rem;
+}
+.seo__block {
+    @extend %flex__space-between
+}
+.seo__item {
+    width: 49%;
+}
+.seo__text {
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: $gray;
+}
+
+/*=== bell ===*/
+.bell {
+    margin-bottom: 9rem;
+}
+.bell__form {
+    @extend %flex__space-between;
+    padding: 4rem 3rem;
+}
+.bell__header {
+    display: flex;
+    flex-direction: column;
+}
+.bell__title {
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: $black__light;
+    margin: 0 0 1.3rem;
+}
+.bell__text {
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: $gray;
+    max-width: 32rem;
+    margin: 0;
+}
+.bell__name,  .bell__phone {
+    border: 2px solid $gray_border;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin-top: 2rem;
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: $black__light;
+    &::placeholder {
+        font-family: Montserrat;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17px;
+        color: $gray;
+    }
+}
+.btn-bell {
+    margin-top: 2rem;
 }
