@@ -8,6 +8,7 @@ $yellow: #FEDA1F;
 $blue: #2747F0;
 $gray_bcg: #E5E5E5;
 $gray_border: #C5C5C5;
+$gray_footer: #D1D1D1;
 
 %flex__space-between {
     display: flex;
@@ -39,7 +40,8 @@ body {
 
 /*=== HEADER ===*/
 .header {
-    background: url('./img/header_bcg.png') 50% 50% no-repeat;
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.76) 59.9%, rgba(0, 0, 0, 0.5) 100%), url('./img/header_bcg.png');
+    background-position: center center;
 }
 .header__title {
     font-family: Montserrat;
@@ -692,4 +694,99 @@ body {
 }
 .btn-bell {
     margin-top: 2rem;
+}
+
+/*=== footer ===*/
+.footer {
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.76) 59.9%, rgba(0, 0, 0, 0.5) 100%), url('./img/header_bcg.png');
+    background-position: center center;
+    padding: 5rem 0 4.5rem;
+}
+.footer__block {
+    @extend %flex__space-between;
+}
+.footer__item {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+}
+.footer__title {
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: $white;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 1.3rem;
+}
+.footer__copyrihgt {
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    color: $gray_footer;
+    padding: 0;
+    margin: 0;
+}
+.footer__link{
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    text-align: center;
+    color: $white;
+    text-decoration: none;
+    margin-bottom: 1rem;
+    &:hover, &:focus {
+        color: $yellow;
+        transition: color .2s linear;
+    }
+}
+.footer__phone {
+    display: flex;
+}
+.footer__icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 1.5rem;
+}
+.footer__number {
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: $white;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 1rem;
+}
+.footer__mode {
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    color: $white;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 1.8rem;
+}
+.footer__pic {
+    display: flex;
+    justify-content: center;
+}
+.footer__messenger {
+    width: 25px;
+    height: 25px;
+    margin: 0 1rem;
+}
+.footer__text {
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    color: $gray_footer;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 2.2rem;
 }
