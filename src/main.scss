@@ -50,6 +50,8 @@ body {
     line-height: 9.8rem;
     color: $white;
     text-align: center;
+    margin: 5rem 0;
+    padding: 0;
 }
 .header__subtitles {
     display: flex;
@@ -59,6 +61,7 @@ body {
 .header__subtitle {
     display: flex;
     justify-content: center;
+    margin-bottom: 5rem;
 }
 .header__sub{
     font-family: Montserrat;
@@ -67,6 +70,14 @@ body {
     line-height: 2.4rem;
     color: $white;
     max-width: 361px;
+    margin: 0;
+    padding: 0;
+}
+.header__icon {
+    width: 40px;
+    height: 40px;
+    fill: $white;
+    margin-right: 3rem;
 }
 
 /*=== nav ===*/
@@ -75,6 +86,7 @@ body {
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
+    margin: 4rem 0 5rem 0;
 }
 .nav__left {
     font-family: Montserrat;
@@ -114,6 +126,13 @@ body {
     font-size: 1.2rem;
     line-height: 1.5rem;
     color: $white;
+}
+.nav__pic {
+    display: flex;
+    flex-direction: column;
+}
+.messenger-nav {
+    padding: .5rem 0;
 }
 
 /*=== order form ===*/
@@ -157,10 +176,12 @@ body {
 .order__name {
     @extend %order_items;
     width: 100%;
+    height: 5rem;
     margin-bottom: 2.1rem;
 }
 .order__phone {
     @extend %order_items;
+    height: 5rem;
     width: 100%;
     margin-bottom: 2rem;
 }
@@ -173,13 +194,16 @@ body {
 }
 .order__time {
     width: 100%;
+    height: 5rem;
     margin-bottom: 2.1rem;
 } 
 .order__date {
     @extend %order_items;
+    height: 5rem;
 }
 .order__hours {
     @extend %order_items;
+    height: 5rem;
 }
 .order__place {
     width: 100%;
@@ -187,12 +211,15 @@ body {
 }
 .order__from {
     @extend %order_items;
+    height: 5rem;
 }
 .order__to {
     @extend %order_items;
+    height: 5rem;
 }
 .order__car{
     width: 100%;
+    height: 5rem;
     @extend %order_items;
     margin-bottom: 2rem;
 }
@@ -235,6 +262,8 @@ body {
     font-size: 4rem;
     line-height: 4.9rem;
     color: $black__light;
+    margin: 0;
+    padding: 0;
     margin-left: 5.4rem;
 }
 
@@ -261,6 +290,14 @@ body {
 .causes__caption {
     display: flex;
     justify-content: start;
+    margin-bottom: 1.7rem;
+    align-items: center;
+}
+.causes__icon {
+    width: 4rem;
+    height: 4rem;
+    fill: $white;
+    margin-right: 1.5rem;
 }
 .causes__subtitle {
     font-family: Montserrat;
@@ -268,6 +305,8 @@ body {
     font-size: 1.6rem;
     line-height: 2rem;
     color: $white;
+    margin: 0;
+    padding: 0;
 }
 .causes__text {
     font-family: Montserrat;
@@ -275,6 +314,8 @@ body {
     font-size: 1.6rem;
     line-height: 2rem;
     color: $white;
+    margin: 0;
+    padding: 0;
 }
 
 /*=== speech ===*/
@@ -341,6 +382,7 @@ body {
 .class__car {
     @extend %flex__space-between;
     margin-top: 5rem;
+    margin-bottom: 7rem;
 }
 .class_item {
     width: 25%;
@@ -394,6 +436,7 @@ body {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 3rem 3rem;
     margin-bottom: 4rem;
+    margin-top: 4.6rem;
 }
 .popular__item {
     position: relative;
@@ -454,6 +497,7 @@ body {
 }
 .numeral__block {
     @extend %flex__space-between;
+    margin-top: 5rem;
 }
 .numeral__item {
     display: flex;
@@ -465,7 +509,7 @@ body {
     justify-content: center;
 }
 .numeral__icon {
-    color: $blue;
+    fill: $blue;
     width: 6rem;
     height: 6rem;
     margin-right: .4rem;
@@ -495,6 +539,8 @@ body {
 .review__header {
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 7rem;
+    align-items: center;
 }
 .review__subtitle {
     font-family: Montserrat;
@@ -502,6 +548,8 @@ body {
     font-size: 1.6rem;
     line-height: 2rem;
     color: $gray;
+    margin-left: 6rem;
+    max-width: 26.5rem;
 }
 .review__block {
     display: grid;
@@ -593,6 +641,9 @@ body {
 .ask__header-active {
     background: $yellow;
 }
+.ask__block {
+    margin-top: 5rem;
+}
 .ask__minus, .ask__plus{
     font-family: Montserrat;
     font-weight: 700;
@@ -652,6 +703,8 @@ body {
 .bell__form {
     @extend %flex__space-between;
     padding: 4rem 3rem;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
 }
 .bell__header {
     display: flex;
@@ -746,7 +799,7 @@ body {
 .footer__phone {
     display: flex;
 }
-.footer__icon {
+.phone {
     width: 20px;
     height: 20px;
     margin-right: 1.5rem;
@@ -775,7 +828,7 @@ body {
     display: flex;
     justify-content: center;
 }
-.footer__messenger {
+.messenger {
     width: 25px;
     height: 25px;
     margin: 0 1rem;
