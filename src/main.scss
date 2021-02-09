@@ -555,11 +555,15 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 3rem;
+    position: relative;
 }
 .review__item {
-    display: flex;
+    display: none;
     flex-direction: column;
     position: relative;
+}
+.review__item-active{
+    display: flex;
 }
 .review__rectangle {
     background: linear-gradient(180deg, #2747F0 0%, #203DD6 100%);
@@ -626,6 +630,21 @@ body {
 }
 .review__name-right {
     order: 0;
+}
+.slider__arrow {
+    width: 1.3rem;
+    height: 4rem;
+    fill: $blue;
+    position: absolute;
+    cursor: pointer;
+    z-index: 3;
+    bottom: 1.25rem;
+}
+.slider__arrow-left {
+    left: 0;
+}
+.slider__arrow-right {
+    right: 0;
 }
 
 /*=== ask ===*/
