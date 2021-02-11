@@ -558,13 +558,11 @@ body {
     position: relative;
 }
 .review__item {
-    display: none;
+    display: flex;
     flex-direction: column;
     position: relative;
 }
-.review__item-active{
-    display: flex;
-}
+
 .review__rectangle {
     background: linear-gradient(180deg, #2747F0 0%, #203DD6 100%);
     border-radius: 10px;
