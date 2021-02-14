@@ -19,7 +19,6 @@ function currentSlide(n) {
 
 /* Функция перелистывания */
 function showSlides(n) {
-    let i;
     let slides = document.getElementsByClassName("review__item");
     
     if (n > slides.length) {
@@ -32,7 +31,9 @@ function showSlides(n) {
   /* Проходим по каждому слайду в цикле for */
     for (let slide of slides) {
         slide.style.display = "none";
-    }   
+    } 
     slides[slideIndex - 1].style.display = "flex";
     slides[slideIndex].style.display = "flex";  
+
+   
 }

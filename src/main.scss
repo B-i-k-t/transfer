@@ -637,6 +637,10 @@ body {
     cursor: pointer;
     z-index: 3;
     bottom: 1.25rem;
+    &:hover, &:focus {
+        fill: $yellow;
+        transition: fill .2s linear;
+    }
 }
 .slider__arrow-left {
     left: 0;
@@ -644,6 +648,29 @@ body {
 .slider__arrow-right {
     right: 0;
 }
+.slider__dots {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    left: 0;
+    bottom: 1.25rem;
+    z-index: 4;
+    text-align: center;
+}
+.slider__dot {
+    width: 10px;
+    height: 10px;
+    margin: 5px 7px;
+    padding: 0;
+    display: inline-block;
+    background-color: $yellow;
+    border-radius: 5px;
+    cursor: pointer;
+    &:hover, &:focus {
+        background-color: $yellow;
+        transition: background-color .2s linear;
+    }
+  }
 
 /*=== ask ===*/
 .ask {
