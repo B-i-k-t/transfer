@@ -602,6 +602,7 @@ body {
 }
 .review__klient {
     display: flex;
+    align-items: center;
 }
 .review__klient-right {
     position: absolute;
@@ -653,9 +654,10 @@ body {
     height: auto;
     position: absolute;
     left: 0;
-    bottom: 1.25rem;
-    z-index: 4;
+    bottom: 2.75rem;
+    z-index: 2;
     text-align: center;
+    align-items: center;
 }
 .slider__dot {
     width: 10px;
@@ -663,7 +665,7 @@ body {
     margin: 5px 7px;
     padding: 0;
     display: inline-block;
-    background-color: $yellow;
+    background-color: $gray;
     border-radius: 5px;
     cursor: pointer;
     &:hover, &:focus {
@@ -671,7 +673,10 @@ body {
         transition: background-color .2s linear;
     }
   }
-
+.slider__dot_active{
+    background-color: $yellow;
+    transition: background-color .2s linear;
+}
 /*=== ask ===*/
 .ask {
     margin-bottom: 7rem;
