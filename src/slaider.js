@@ -13,21 +13,16 @@ arrow_left.onclick = function() {
     showSlides(slideIndex -= 2);  
 };
 
-/* Устанавливаем текущий слайд */
-function currentSlide(n) {
-    showSlides(slideIndex = n);
-}
-
 /* Функция перелистывания */
 function showSlides(n) {
     let slides = document.getElementsByClassName("review__item");
     let dots = document.getElementsByClassName("slider__dot");
     
     if (n > slides.length) {
-      slideIndex = 1
+      slideIndex = 1;
     }
     if (n < 1) {
-        slideIndex = slides.length-1
+        slideIndex = slides.length-1;
     }
   
   /* Проходим по каждому слайду в цикле for */
@@ -43,4 +38,9 @@ function showSlides(n) {
     }
     dots[slideIndex - 1].className += " slider__dot_active";
     dots[slideIndex].className += " slider__dot_active";
+}
+
+/* Устанавливаем текущий слайд */
+function currentSlide(n) {
+    showSlides(slideIndex = n);
 }

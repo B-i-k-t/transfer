@@ -669,12 +669,12 @@ body {
     border-radius: 5px;
     cursor: pointer;
     &:hover, &:focus {
-        background-color: $yellow;
+        background-color: $blue;
         transition: background-color .2s linear;
     }
   }
 .slider__dot_active{
-    background-color: $yellow;
+    background-color: $blue;
     transition: background-color .2s linear;
 }
 /*=== ask ===*/
@@ -702,6 +702,7 @@ body {
     display: none;
     margin-left: 6.3rem;
     margin-right: 1.5rem;
+    cursor: pointer;
 }
 .ask__minus-active, .ask__plus-active {
     display: block;
