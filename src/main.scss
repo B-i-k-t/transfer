@@ -24,6 +24,7 @@ $gray_footer: #D1D1D1;
     font-size: 1.4rem;
     line-height: 1.7rem;
     color: $black__light;
+    width: 49%;
 }
 
 html {
@@ -36,6 +37,7 @@ body {
     max-width: 1120px;
     margin: auto;
     padding: 3px;
+    overflow: hidden;
 }
 
 /*=== HEADER ===*/
@@ -95,10 +97,23 @@ body {
     line-height: 2rem;
     color: $white;
     max-width: 175px;
+    order: 1;
 }
 .nav__center {
     display: flex;
     justify-content: space-between;
+    order: 1;
+    padding: 0 0.5rem;
+}
+.nav__kontakt {
+    margin-left: 0.5rem;
+    text-align: right;    
+}
+.nav__right {
+    order: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .nav__link {
     text-decoration: none;
@@ -140,7 +155,7 @@ body {
     max-width: 987px;
     box-sizing: border-box;
     text-align: center;
-    padding: 40px 65px 65px;
+    padding: 40px 65px 45px;
     margin: auto;
     background: $white;
     box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.6);
@@ -188,9 +203,10 @@ body {
 .order__comments {
     width: 100%;
     @extend %order_items;
+    margin-bottom: 2rem;
 }
 .order__right {
-    margin: 0 17px;
+    width: 50%;
 }
 .order__time {
     width: 100%;
@@ -218,7 +234,7 @@ body {
     height: 5rem;
 }
 .order__car{
-    width: 100%;
+    width: 99%;
     height: 5rem;
     @extend %order_items;
     margin-bottom: 2rem;
@@ -881,7 +897,7 @@ body {
 .messenger {
     width: 25px;
     height: 25px;
-    margin: 0 1rem;
+    margin: 0 0 0 1rem;
 }
 .footer__text {
     font-family: Montserrat;
@@ -892,4 +908,60 @@ body {
     margin: 0;
     padding: 0;
     margin-bottom: 2.2rem;
+}
+
+@media (max-width: 892px) {
+    .nav__center {
+        width: 100%;
+        order: 2;
+        justify-content: center;
+        text-align: center;
+        margin-top: 1rem;
+    }
+    .header__title {
+        font-size: 6.5rem;
+        line-height: 8rem;
+    }
+    .header__sub{
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+        max-width: 310px;
+    }
+    .order {
+        max-width: 760px;
+        margin-bottom: 80px;
+    }
+}
+@media (max-width: 768px) {
+    .container {
+        max-width: 690px;
+    }
+    .header__title {
+        font-size: 5rem;
+        line-height: 6.1rem;
+    }
+    .header__subtitle {
+        margin-bottom: 4rem;
+    }
+    .header__sub{
+        font-size: 1.6rem;
+        line-height: 2rem;
+        max-width: 264px;
+    }
+    .header__icon {
+        width: 35px;
+        height: 35px;
+        margin-right: 1.8rem;
+    }
+    .order {
+        max-width: 540px;
+        padding: 40px 65px 40px;
+        margin-bottom: 56px;
+    }
+    .order__left{
+        width: 100%;
+    }
+    .order__right {
+        width: 100%;
+    }
 }
