@@ -424,6 +424,7 @@ body {
 }
 .class__volume {
     display: flex;
+    justify-content: center;
     align-items: center;
     margin-bottom: 2rem;
 }
@@ -440,9 +441,9 @@ body {
     line-height: 2rem;
     color: $gray;
     margin: 0;
-    &:first-child {
-        margin-right: 1.5rem;
-    }
+}
+ .class__text-first {
+    margin-right: 1.5rem;
 }
 
 /*=== popular ===*/
@@ -516,6 +517,7 @@ body {
 .numeral__block {
     @extend %flex__space-between;
     margin-top: 5rem;
+    flex-wrap: nowrap;
 }
 .numeral__item {
     display: flex;
@@ -548,6 +550,7 @@ body {
     text-align: center;
     color: $black__light;
     margin: .8rem 0 0;
+    white-space: pre-wrap;
 }
 
 /*=== review ===*/
@@ -802,9 +805,10 @@ body {
     margin-top: 2rem;
     font-family: Montserrat;
     font-weight: 600;
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
     color: $black__light;
+    height: 5rem;
     &::placeholder {
         font-family: Montserrat;
         font-weight: 600;
@@ -912,6 +916,16 @@ body {
     margin-bottom: 2.2rem;
 }
 
+@media (max-width: 1040px) {
+    .class__car {
+        justify-content: center;
+    }
+    .class_item {
+        width: 50%;
+        text-align: center;
+    }
+}
+
 @media (max-width: 892px) {
     .nav__center {
         width: 100%;
@@ -943,6 +957,9 @@ body {
     .speech__director {
         margin-right: 0;
         margin-left: 0;
+    }
+    .popular__blocks {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 @media (max-width: 768px) {
