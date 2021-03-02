@@ -37,8 +37,7 @@ body {
     max-width: 1120px;
     margin: auto;
     padding: 3px;
-    overflow-x: hidden;
-    overflow-y: visible;
+    overflow: hidden;
 }
 
 /*=== HEADER ===*/
@@ -289,6 +288,7 @@ body {
 .causes {
     padding-top: 7rem;
     padding-bottom: 4.3rem;
+    overflow: hidden;
 }
 .causes__block {
     display: flex;
@@ -557,6 +557,12 @@ body {
 .review {
     margin-bottom: 8.6rem;
 }
+.review__large {
+    display: block;
+}
+.review__small {
+    display: none;
+}
 .review__header {
     display: flex;
     flex-wrap: wrap;
@@ -587,6 +593,7 @@ body {
 .review__rectangle {
     background: linear-gradient(180deg, #2747F0 0%, #203DD6 100%);
     border-radius: 10px;
+    max-width: 54rem;
     height: 26rem;
     padding: 0 3.7rem;
 }
@@ -606,7 +613,6 @@ body {
     line-height: 2rem;
     color: $white;
     margin-top: -3rem;
-    margin-bottom: 0;
 }
 .review__wrapper {
     text-align: right;
@@ -698,6 +704,27 @@ body {
     background-color: $blue;
     transition: background-color .2s linear;
 }
+
+/*=== review small ===*/
+.review__item_sm {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.slider__dot_sm {
+    width: 10px;
+    height: 10px;
+    margin: 5px 7px;
+    padding: 0;
+    display: inline-block;
+    background-color: $gray;
+    border-radius: 5px;
+    cursor: pointer;
+    &:hover, &:focus {
+        background-color: $blue;
+        transition: background-color .2s linear;
+    }
+  }
 /*=== ask ===*/
 .ask {
     margin-bottom: 7rem;
@@ -812,8 +839,8 @@ body {
     &::placeholder {
         font-family: Montserrat;
         font-weight: 600;
-        font-size: 14px;
-        line-height: 17px;
+        font-size: 1.4rem;
+        line-height: 1.7rem;
         color: $gray;
     }
 }
@@ -924,6 +951,9 @@ body {
         width: 50%;
         text-align: center;
     }
+    .review__rectangle {
+        height: 28rem;
+    }
 }
 
 @media (max-width: 892px) {
@@ -960,6 +990,9 @@ body {
     }
     .popular__blocks {
         grid-template-columns: repeat(2, 1fr);
+    }
+    .review__rectangle {
+        height: 35rem;
     }
 }
 @media (max-width: 768px) {
@@ -1002,5 +1035,45 @@ body {
     }
     .speech__title {
         margin-bottom: 1.9rem;
+    }
+    .review {
+        margin-bottom: 4rem;
+    }
+    .review__block {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-column-gap: 0;
+        padding: 0 8rem;
+        margin-bottom: 3rem;
+    }
+    .review__small {
+        display: block;
+    }
+    .review__large {
+        display: none;
+    }
+    .review__rectangle {
+        max-width: 54rem;
+        height: 100%;
+        margin: 0 auto;
+    }
+    .review__text {
+        margin-bottom: 2rem;
+    }
+    .slider__arrow {
+        bottom: -3.75rem;
+    }
+    .slider__dots {
+        bottom: -3rem;
+    }
+    .slider__arrow-left {
+        left: 4rem;
+    }
+    .slider__arrow-right {
+        right: 4rem;
+    }
+    .slider__dot_active{
+        background-color: $blue;
+        transition: background-color .2s linear;
     }
 }
