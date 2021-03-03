@@ -104,6 +104,7 @@ body {
     justify-content: space-between;
     order: 1;
     padding: 0 0.5rem;
+    list-style-type: none;
 }
 .nav__kontakt {
     margin-left: 0.5rem;
@@ -792,6 +793,7 @@ body {
     font-size: 1.6rem;
     line-height: 2rem;
     color: $gray;
+    margin: 0;
 }
 
 /*=== bell ===*/
@@ -803,6 +805,7 @@ body {
     padding: 4rem 3rem;
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.05);
     border-radius: 10px;
+    align-items: center;
 }
 .bell__header {
     display: flex;
@@ -829,12 +832,12 @@ body {
     border: 2px solid $gray_border;
     box-sizing: border-box;
     border-radius: 10px;
-    margin-top: 2rem;
     font-family: Montserrat;
     font-weight: 600;
     font-size: 1.4rem;
     line-height: 1.7rem;
     color: $black__light;
+    max-width: 19.2rem;
     height: 5rem;
     &::placeholder {
         font-family: Montserrat;
@@ -843,9 +846,6 @@ body {
         line-height: 1.7rem;
         color: $gray;
     }
-}
-.btn-bell {
-    margin-top: 2rem;
 }
 
 /*=== footer ===*/
@@ -944,6 +944,9 @@ body {
 }
 
 @media (max-width: 1040px) {
+    .container {
+        padding: 0 1rem;
+    }
     .class__car {
         justify-content: center;
     }
@@ -953,6 +956,22 @@ body {
     }
     .review__rectangle {
         height: 28rem;
+    }
+    .bell__form {
+        justify-content: start;
+    }
+    .bell__header {
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 3rem;
+    }
+    .bell__title {
+        margin: 0 3rem 0 0 ;
+    }
+    .bell__name,  .bell__phone {
+        margin-right: 3rem;
     }
 }
 
@@ -993,6 +1012,15 @@ body {
     }
     .review__rectangle {
         height: 35rem;
+    }
+    .bell__name {
+        max-width: 15rem;
+    }
+    .bell__phone {
+        max-width: 16.6rem;
+    }
+    .bell__name,  .bell__phone {
+        margin-right: 2rem;
     }
 }
 @media (max-width: 768px) {
@@ -1075,5 +1103,25 @@ body {
     .slider__dot_active{
         background-color: $blue;
         transition: background-color .2s linear;
+    }
+    .seo {
+        margin-bottom: 5.2rem;
+    }
+    .seo__text {
+        margin-bottom: 1.6rem;
+    }
+    .seo__item {
+        width: 100%;
+    }
+    .footer {
+        padding: 5rem 0 1.5rem;
+    }
+    .footer__item {
+        width: 50%;  
+        margin-bottom: 3rem;  
+        text-align: center;    
+    }
+    .footer__phone {
+        justify-content: center;
     }
 }
