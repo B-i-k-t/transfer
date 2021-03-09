@@ -973,6 +973,9 @@ body {
     .bell__name,  .bell__phone {
         margin-right: 3rem;
     }
+    .speech__director {
+        max-width: 350px;
+    }
 }
 
 @media (max-width: 892px) {
@@ -1006,6 +1009,7 @@ body {
     .speech__director {
         margin-right: 0;
         margin-left: 0;
+        max-width: 300px;
     }
     .popular__blocks {
         grid-template-columns: repeat(2, 1fr);
@@ -1063,6 +1067,9 @@ body {
     }
     .speech__title {
         margin-bottom: 1.9rem;
+    }
+    .speech__director {
+        max-width: 225px;
     }
     .review {
         margin-bottom: 4rem;
@@ -1139,6 +1146,35 @@ body {
         margin: 0 -1rem;
         border-radius: 0;
     }
+    .order__caption {
+        flex-wrap: wrap;
+        text-align: left;
+    }
+    .order__title{
+        width: 100%;
+        margin: 0 0 1.5rem;
+    }
+    .order__subtitle {
+        font-size: 1.3rem;
+        line-height: 1.6rem;
+        width: 100%;
+        margin: 0 0 2.7rem;
+    }
+    .order__date {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    .order__hours {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    .order__from {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    .order__to {
+        width: 100%;
+    }
     .causes {
         padding-top: 5rem;
         padding-bottom: 2.2rem;
@@ -1153,9 +1189,41 @@ body {
         width: 3.5rem;
         height: 3.5rem;
     }
+    .causes__subtitle {
+        font-size: 1.5rem;
+        line-height: 1.8rem;
+    }
+    .causes__text {
+        font-size: 1.5rem;
+        line-height: 1.8rem;
+    }
     .block__title {
         font-size: 2rem;
         line-height: 2.4rem;
+        text-align: center;
+        margin-left: 0;
+    }
+    .speech {
+        margin-bottom: 5rem;
+    }
+    .speech__apostrophe {
+        font-size: 10rem;
+        line-height: 12.2rem;
+    }
+    .speech__content {
+        padding: 0 3.2rem 5.4rem;
+    }
+    .speech__title {
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+        margin-bottom: 1rem;
+    }
+    .speech__text {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
+    .speech__director {
+        max-width: 180px;
     }
 }
 @media (max-width: 340px) {
@@ -1176,5 +1244,30 @@ body {
         width: 30px;
         height: 30px;
     }
-
+    .order {
+        padding: 28px 30px 48px;
+        margin: 0 -1rem;
+    }
+    .order__subtitle {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
+    .causes__block {
+        max-width: 256px;
+        margin:3rem auto 0;
+    }
+    .causes__subtitle {
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+    }
+    .causes__text {
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+    }
+    .block__title {
+        margin-left: 0;
+    }
+    .speech__director {
+        max-width: 133px;
+    }
 }
